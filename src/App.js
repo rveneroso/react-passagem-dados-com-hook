@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import EntradaDado from "./components/EntradaDado";
 import SaidaDado from "./components/SaidaDado";
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [username, setUsername] = useState("Nícolas");
   return (
     <>
-      <EntradaDado />
-      <SaidaDado />
+      <EntradaDado username={username} setUsername={setUsername} />
+      <SaidaDado username={username} />
     </>
   );
 }
